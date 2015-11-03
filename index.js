@@ -4,5 +4,6 @@ var cat = require('./lib/cat-client');
 
 module.exports = {
     newTransaction: cat.newTransaction,
-    logEvent: cat.logEvent
+    logEvent: cat.logEvent,
+    logError: cat.logError
 };
