@@ -1,27 +1,27 @@
 {
-  "name": "@dp/cat-client",
-  "version": "0.0.2",
-  "description": "Cat client for nodejs.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@code.dianpingoa.com:node/cat-client.git"
-  },
-  "keywords": [
-    "cat",
-    "client",
-    "nodejs"
-  ],
-  "author": "ywang1724",
-  "license": "MIT",
-  "dependencies": {
-    "jackpot": "0.0.6",
-    "js-string-escape": "^1.0.0",
-    "moment": "^2.10.6",
-    "random-key": "^0.3.2",
-    "read-only": "^0.1.1"
-  }
+    "name": "@dp/cat-client",
+    "version": "0.0.3",
+    "description": "Cat client for nodejs.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@code.dianpingoa.com:node/cat-client.git"
+    },
+    "keywords": [
+        "cat",
+        "client",
+        "nodejs"
+    ],
+    "author": "ywang1724",
+    "license": "MIT",
+    "dependencies": {
+        "jackpot": "0.0.6",
+        "js-string-escape": "^1.0.0",
+        "moment": "^2.10.6",
+        "random-key": "^0.3.2",
+        "read-only": "^0.1.1"
+    }
 }
