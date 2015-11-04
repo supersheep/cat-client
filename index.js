@@ -5,8 +5,4 @@ var cat = global.cat || (function () {
 	return global.cat;
 })();
 
-module.exports = {
-    newTransaction: cat.newTransaction,
-    logEvent: cat.logEvent,
-    logError: cat.logError
-};
+module.exports = cat;

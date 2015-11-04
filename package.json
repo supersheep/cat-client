@@ -1,6 +1,6 @@
 {
     "name": "@dp/cat-client",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Cat client for nodejs.",
     "main": "index.js",
     "scripts": {
