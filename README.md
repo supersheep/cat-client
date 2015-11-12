@@ -8,6 +8,22 @@
 $ npm install @dp/cat-client --save
 ```
 
+## 配置
+
+部署应用的服务器上对应路径添加配置文件：/data/appdatas/cat/client.json
+
+格式如下：
+
+```
+{
+    "server": {
+        "ip": "xxx.xxx.xxx.xxx",
+        "port": xxxx
+    },
+    "domain": "hahaha"
+}
+```
+
 ## Usage
 
 ```
