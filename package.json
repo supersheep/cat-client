@@ -1,6 +1,6 @@
 {
   "name": "@dp/cat-client",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Cat client for nodejs.",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "@dp/logger-container": "0.0.1",
+    "debug": "^2.2.0",
     "jackpot": "0.0.6",
     "js-string-escape": "^1.0.0",
     "moment": "^2.10.6",
