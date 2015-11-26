@@ -19,6 +19,35 @@ $ npm install @dp/cat-client --save
 
 ```
 var Cat = require('@dp/cat-client');
+
+//node-server 默认已经完成此初始化
+Cat.init({
+    appName:"node-xxx-web"
+});
+
+//log event
+Cat.logEvent({
+    type:"URL",
+    name:"/index"
+});
+
+//log error
+Cat.logError({
+    msg:"error userId not found",
+    cause:e
+});
+
+//transaction
+var t = Cat.newTransaction({
+    type:"URL",
+    name:"/index"
+});
+//处理业务逻辑, 推荐使用generator同步写法，以确保其他调用setStatus complete 是在业务逻辑处理之后
+//例如 yield biz();
+
+t.setStatus(Cat.STATUS.SUCCESS);
+t.complete();
+
 ```
 
 ## API
@@ -67,7 +96,7 @@ var Cat = require('@dp/cat-client');
 
 设置transaction的状态，0表示成功，非零表示失败，默认值是0。
 
-`status`: {string}
+`status`: {string} , 参见 `Cat.STATUS`常量
 
 #### transactionHandler.addData(data)
 
