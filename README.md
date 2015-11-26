@@ -64,7 +64,7 @@ t.complete();
 
     `name` - {string} Event的name，默认值是undefined。
 
-    `status` - {string} Event的status，0表示成功，非零表示失败，默认值是0。
+    `status` - {string} Event的status，请使用`Cat.STATUS`常量, 默认成功
 
     `data` - {string} Event的data，默认值为undefined。
 
@@ -108,3 +108,7 @@ t.complete();
 
 完成transaction。
 
+### Cat.STATUS
+`logEvent` ,`transaction.setStatus` 所使用的状态码
+- `SUCCESS` 成功
+- `FAIL`    失败
