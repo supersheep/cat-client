@@ -109,6 +109,7 @@ t.complete();
 完成transaction。
 
 ### Cat.STATUS
+
 `logEvent` ,`transaction.setStatus` 所使用的状态码
 - `SUCCESS` 成功
 - `FAIL`    失败
