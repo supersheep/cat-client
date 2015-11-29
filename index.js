@@ -1,7 +1,7 @@
 'use strict';
 
 var cat = global.cat || (function () {
-	global.cat = require('./lib/cat-client');
+	global.cat = require('./lib/');
 	return global.cat;
 })();
 

@@ -8,18 +8,8 @@ var Cat = require('../index');
  * E16:44:19.638    test-node-1 log-event-1 1   hello-world-1
  */
 
-Cat.logEvent({
-    type: 'test-node-0',
-    name: 'log-event-0',
-    status: 0,
-    data: 'hello-world-0'
-});
+Cat.logEvent('category-0', 'category-1');
 
-setTimeout(function() {
-    Cat.logEvent({
-        type: 'test-node-1',
-        name: 'log-event-1',
-        status: 1,
-        data: 'hello-world-1'
-    })
+setTimeout(function () {
+    Cat.logEvent('category-0-1', 'category-1-1', Cat.STATUS.FAIL, "some data");
 }, 1000);
