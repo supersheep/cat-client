@@ -18,12 +18,6 @@ $ npm install @dp/cat-client --save
 ## Usage
 
 ```
-var Cat = require('@dp/cat-client');
-
-//node-server 默认已经完成此初始化
-Cat.init({
-    appName:"node-xxx-web"
-});
 
 //log event
 Cat.logEvent("URL","/index");
@@ -43,6 +37,10 @@ t.complete();
 ```
 
 ## API
+
+如果你使用了node-server ， 请使用 `this.cat` 来获取cat实例， 确保打的各种log能够集成在到URL请求上
+你也可以直接使用 `var cat = require("@dp/cat-client")` 直接使用cat实例，log可以正常打，但是无法集成到url上
+
 
 ### Cat.logEvent(type , name , status, data)
 
