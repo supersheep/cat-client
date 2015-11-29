@@ -26,22 +26,14 @@ Cat.init({
 });
 
 //log event
-Cat.logEvent({
-    type:"URL",
-    name:"/index"
-});
+Cat.logEvent("URL","/index");
 
 //log error
-Cat.logError({
-    msg:"error userId not found",
-    cause:e
-});
+Cat.logError("error userId not found",e);
 
 //transaction
-var t = Cat.newTransaction({
-    type:"URL",
-    name:"/index"
-});
+var t = Cat.newTransaction("URL","/index");
+
 //处理业务逻辑, 推荐使用generator同步写法，以确保其他调用setStatus complete 是在业务逻辑处理之后
 //例如 yield biz();
 
@@ -52,45 +44,37 @@ t.complete();
 
 ## API
 
-### Cat.logEvent(options)
+### Cat.logEvent(type , name , status, data)
 
 新建event用以监控。
 
-- `options`: {object}
 
-    options包含一下内容：
+- `type` - {string} Event的type，默认值是undefined。
 
-    `type` - {string} Event的type，默认值是undefined。
+- `name` - {string} Event的name，默认值是undefined。
 
-    `name` - {string} Event的name，默认值是undefined。
+- `status` - {string} optional ,Event的status，请使用`Cat.STATUS`常量, 默认成功 
 
-    `status` - {string} Event的status，请使用`Cat.STATUS`常量, 默认成功
+- `data` - {string} optional,   Event的data，默认值为undefined。
 
-    `data` - {string} Event的data，默认值为undefined。
-
-### Cat.logError(options)
+### Cat.logError(msg,error)
 
 新建error用以监控。
 
-- `options`: {object}
 
-    options包含一下内容：
+- `msg` - {string} 用户需要记录的信息，默认值是undefined。
 
-    `msg` - {string} 用户需要记录的信息，默认值是undefined。
+- `error` - {object} Error对象。
 
-    `cause` - {object}	Error对象。
-
-### Cat.newTransaction(options)
+### Cat.newTransaction(type,name)
 
 初始化生成一个transaction handler实例，包含一系列Transaction操作接口。
 
-- `options`: {object}
 
-    options包含以下的内容：
 
-    `type` - {string} Transaction的type，默认值为undefined。
+- `type` - {string} Transaction的type，默认值为undefined。
 
-    `name` - {string} Transaction的name，默认值为undefined。
+- `name` - {string} Transaction的name，默认值为undefined。
 
 #### transactionHandler.setStatus(status)
 
