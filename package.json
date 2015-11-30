@@ -20,10 +20,10 @@
   "dependencies": {
     "@dp/logger-container": "0.0.1",
     "debug": "^2.2.0",
-    "jackpot": "0.0.6",
     "js-string-escape": "^1.0.0",
     "moment": "^2.10.6",
     "read-only": "^0.1.1",
+    "request": "^2.67.0",
     "xml2js": "^0.4.15"
   },
   "devDependencies": {
