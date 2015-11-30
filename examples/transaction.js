@@ -16,4 +16,7 @@ Cat.logError("ErrorInTransaction", new Error());
 
 t.setStatus(Cat.STATUS.SUCCESS);
 
-t.complete();
+setTimeout(function(){
+
+    t.complete();
+},1000)

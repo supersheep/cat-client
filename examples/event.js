@@ -9,7 +9,8 @@ var Cat = require('../index');
  */
 
 
-setTimeout(function () {
-    Cat.logEvent('category-0', 'category-1');
+Cat.logEvent('category-0', 'category-1');
+
+setTimeout(()=>{
     Cat.logEvent('category-0-1', 'category-1-1', Cat.STATUS.FAIL, "some data");
-}, 1000);
+},1000);
