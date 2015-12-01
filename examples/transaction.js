@@ -9,14 +9,14 @@ var Cat = require('../index');
  * A17:04:11.898    whatt    anyname        1006ms lalallal
  */
 
-var t = Cat.newTransaction("TransactionTest", "case1");
+for(let i=0;i<1000;i++) {
 
-Cat.logEvent("EventInTransaction", "T1");
-Cat.logError("ErrorInTransaction", new Error());
+    var t = Cat.newTransaction("TransactionTest", "case1");
 
-t.setStatus(Cat.STATUS.SUCCESS);
+    Cat.logEvent("EventInTransaction", "T1");
+    Cat.logError("ErrorInTransaction", new Error());
 
-setTimeout(function(){
+    t.setStatus(Cat.STATUS.SUCCESS);
 
     t.complete();
-},1000)
+}
