@@ -11,7 +11,7 @@ var Cat = require('../index');
 
 for(let i=0;i<1000;i++) {
 
-    var t = Cat.newTransaction("TransactionTest", "case1");
+    var t = Cat.newTransaction("TransactionTest1", "case1");
 
     Cat.logEvent("EventInTransaction", "T1");
     Cat.logError("ErrorInTransaction", new Error());
