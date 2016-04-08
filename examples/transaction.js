@@ -17,6 +17,7 @@ for(let i=0;i<1000;i++) {
     Cat.logError("ErrorInTransaction", new Error());
 
     t.setStatus(Cat.STATUS.SUCCESS);
-
+    t.logEvent("childEvent","1");
+    t.logError("childError", new Error());
     t.complete();
 }
