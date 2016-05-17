@@ -1,5 +1,5 @@
 {
-  "name": "@dp/cat-client",
+  "name": "cat-client",
   "version": "1.2.6",
   "description": "Cat client for nodejs.",
   "main": "index.js",
@@ -8,17 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@code.dianpingoa.com:node/cat-client.git"
+    "url": "git@github.com:mangix/cat-client.git"
   },
   "keywords": [
     "cat",
     "client",
     "nodejs"
   ],
-  "author": "ywang1724",
+  "author": ["mangix","ywang1724"],
   "license": "MIT",
   "dependencies": {
-    "@dp/logger-container": "^1.1.0",
     "buffer-builder": "^0.2.0",
     "debug": "^2.2.0",
     "js-string-escape": "^1.0.0",
