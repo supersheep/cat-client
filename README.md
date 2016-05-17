@@ -7,7 +7,7 @@
 ```
 $ npm install cat-client --save
 ```
-请确保你的服务器配置了'/data/appdatas/cat/client.xml' ·
+请确保你的服务器配置了`/data/appdatas/cat/client.xml`
 
 
 ## Usage
